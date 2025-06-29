@@ -25,6 +25,7 @@ export default function App() {
             <Route path="/academics" element={<Academics />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/programmes" element={<Programmes />} />
+            <Route path="/impact" element={<Impact />} />
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
