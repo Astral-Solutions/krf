@@ -1,4 +1,3 @@
-// src/pages/Programmes.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -11,31 +10,26 @@ const fadeUp = {
   }),
 };
 
-const courses = [
+const programmes = [
   {
     title: "3-Month Skills Development Courses",
     target: "Unemployed youth and adults",
-    outcome: "Improved job readiness and confidence",
+    outcome: "Enhanced job readiness and confidence",
   },
   {
-    title: "Accredited First Aid Training Program",
-    target: "Community members, caregivers, and professionals",
-    outcome: "Certified first aiders enhancing workplace/home safety",
+    title: "First Aid Training (SETA-accredited)",
+    target: "Caregivers, professionals, and community members",
+    outcome: "Certified lifesaving skills for home and workplace",
   },
   {
-    title: "Economic Empowerment Skills Program",
-    target: "Aspiring entrepreneurs, youth, and women",
-    outcome: "Economic participation and small business creation",
+    title: "Economic Empowerment Skills",
+    target: "Youth, women, and aspiring entrepreneurs",
+    outcome: "Financial literacy and sustainable income generation",
   },
   {
-    title: "Skills Programme for IT Graduates",
+    title: "Tech & IT Graduate Programme",
     target: "Recent IT graduates",
-    outcome: "Workplace readiness and hands-on experience",
-  },
-  {
-    title: "Small Business and Entrepreneurial Support",
-    target: "Youth (18–35) from disadvantaged communities",
-    outcome: "Increased employability & entrepreneurship",
+    outcome: "Hands-on experience, mentorship, and tech projects",
   },
 ];
 
@@ -68,24 +62,58 @@ const Programmes = () => (
       ))}
     </div>
 
-    <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      custom={5}
-      className="mt-20"
-    >
-      <h2 className="text-3xl font-bold text-[#c27700] mb-4">
-        Programme Activities
-      </h2>
-      <ul className="list-disc ml-6 space-y-1 text-gray-700 text-lg">
-        <li>Accredited SETA Training</li>
-        <li>Job Readiness Workshops</li>
-        <li>Mentorship and Placement Support</li>
-      </ul>
-    </motion.div>
-  </div>
-);
+      {/* Activities Section */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        custom={5}
+        className="mt-20"
+      >
+        <h2 className="text-3xl font-bold text-[#c27700] mb-4">
+          Programme Activities
+        </h2>
+        <ul className="list-disc ml-6 space-y-1 text-gray-700 text-lg">
+          <li>Accredited SETA Training</li>
+          <li>Job Readiness Workshops</li>
+          <li>Mentorship and Placement Support</li>
+        </ul>
+      </motion.div>
+
+      {/* Measurable Impact Section */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        custom={6}
+        className="mt-20"
+      >
+        <h2 className="text-3xl font-bold text-[#c27700] mb-6">
+          Measurable Impact
+        </h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          {impactStats.map((impact, idx) => (
+            <motion.div
+              key={idx}
+              custom={idx}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="bg-white border border-gray-200 p-4 rounded-lg shadow hover:shadow-lg transition"
+            >
+              <h4 className="text-xl font-semibold text-[#c27700]">
+                {impact.title} ({impact.year})
+              </h4>
+              <p className="text-gray-700">Beneficiaries: {impact.count}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
+  );
+};
 
 export default Programmes;

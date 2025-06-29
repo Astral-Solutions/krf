@@ -51,7 +51,7 @@ const Header = () => {
         <ul className="md:hidden bg-white px-6 py-4 space-y-3 font-medium text-[#c27700] shadow-sm border-t border-gray-200">
           <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
           <li><Link to="/programmes" onClick={() => setMenuOpen(false)}>Programmes</Link></li>
-          <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
+          <li><Link to="/impact" onClick={() => setMenuOpen(false)}>Impact</Link></li>
           <li><Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link></li>
           <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
           <li>
