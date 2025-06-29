@@ -1,3 +1,4 @@
+// src/pages/Programmes.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -38,8 +39,9 @@ const Programmes = () => (
     <h1 className="text-4xl font-bold text-[#c27700] mb-8 text-center">
       Programmes at KRF
     </h1>
+
     <div className="space-y-10">
-      {courses.map((course, index) => (
+      {programmes.map((course, index) => (
         <motion.div
           key={index}
           className="bg-gray-100 p-6 rounded-lg shadow-md"
@@ -62,58 +64,24 @@ const Programmes = () => (
       ))}
     </div>
 
-      {/* Activities Section */}
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        custom={5}
-        className="mt-20"
-      >
-        <h2 className="text-3xl font-bold text-[#c27700] mb-4">
-          Programme Activities
-        </h2>
-        <ul className="list-disc ml-6 space-y-1 text-gray-700 text-lg">
-          <li>Accredited SETA Training</li>
-          <li>Job Readiness Workshops</li>
-          <li>Mentorship and Placement Support</li>
-        </ul>
-      </motion.div>
-
-      {/* Measurable Impact Section */}
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        custom={6}
-        className="mt-20"
-      >
-        <h2 className="text-3xl font-bold text-[#c27700] mb-6">
-          Measurable Impact
-        </h2>
-        <div className="grid md:grid-cols-2 gap-4">
-          {impactStats.map((impact, idx) => (
-            <motion.div
-              key={idx}
-              custom={idx}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="bg-white border border-gray-200 p-4 rounded-lg shadow hover:shadow-lg transition"
-            >
-              <h4 className="text-xl font-semibold text-[#c27700]">
-                {impact.title} ({impact.year})
-              </h4>
-              <p className="text-gray-700">Beneficiaries: {impact.count}</p>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-    </div>
-  );
-};
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      custom={5}
+      className="mt-20"
+    >
+      <h2 className="text-3xl font-bold text-[#c27700] mb-4">
+        Programme Activities
+      </h2>
+      <ul className="list-disc ml-6 space-y-1 text-gray-700 text-lg">
+        <li>Accredited SETA Training</li>
+        <li>Job Readiness Workshops</li>
+        <li>Mentorship and Placement Support</li>
+      </ul>
+    </motion.div>
+  </div>
+);
 
 export default Programmes;

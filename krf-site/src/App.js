@@ -8,7 +8,6 @@ import Academics from './pages/Academics.jsx';
 import Donate from './pages/Donate.jsx';
 import Programmes from './pages/Programmes.jsx';
 import Impact from './pages/Impact.jsx';
-import Impact from './pages/Impact.jsx'
 import Contact from './pages/Contact.jsx';
 import Services from './pages/Services.jsx';
 import Layout from './components/Layout.jsx';
@@ -25,7 +24,6 @@ export default function App() {
             <Route path="/academics" element={<Academics />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/programmes" element={<Programmes />} />
-            <Route path="/impact" element={<Impact />} />
             <Route path="/services" element={<Services />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/contact" element={<Contact />} />
