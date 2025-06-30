@@ -26,7 +26,7 @@ const Header = () => {
         <ul className="hidden md:flex space-x-6 font-medium text-[#c27700] text-sm">
           <li><Link to="/about">About</Link></li>
           <li><Link to="/programmes">Programmes</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
+          <li><Link to="/impact">Impact</Link></li>
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li>
