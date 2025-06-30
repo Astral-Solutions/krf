@@ -20,31 +20,29 @@ const About = () => {
         </p>
       </motion.section>
 
-      {/* Profile Section */}
+      {/* Chancellor Section */}
       <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
-  <h2 className="text-3xl font-bold text-[#c27700] mb-4">Chancellor’s Profile: Dr. Koketso Rakhudu</h2>
-  <p className="text-lg leading-relaxed space-y-4">
-    Dr. Koketso Rakhudu is the Chancellor of the Koketso Rakhudu Foundation Community Education and Training Centre,
-    where he is dedicated to advancing education, fostering cultural exchange, and driving community development.
-    A prominent leader within the Royal Bafokeng Nation, he holds the title of Kgosana of the Tsitsing community.
-    <br /><br />
-    Dr. Rakhudu also serves as a Guest Lecturer and Strategic Implementation Partner at several prestigious universities,
-    including the University of South Africa and North West University, focusing on leadership and governance.
-    <br /><br />
-    Additionally, he is the Deputy Chairperson of the Provincial Council on AIDS and the Founder of The Village Economy Indaba Programme,
-    which aims to enhance economic empowerment in local communities.
-    <br /><br />
-    In addition to his leadership roles, Dr. Rakhudu actively participates in research initiatives through the
-    South African Population Research Infrastructure Network, collaborating with esteemed institutions such as The Aurum Institute and
-    Johns Hopkins University.
-    <br /><br />
-    Recognized as one of the Top 30 Fast-Rising Professionals in Public Administration and Community Leadership by
-    the Pan African Leadership Institute, he exemplifies a commitment to social welfare and community upliftment.
-    <br /><br />
-    As Chancellor, Dr. Rakhudu envisions creating a transformative educational experience that empowers individuals and drives sustainable
-    development within communities.
-  </p>
-</motion.section>
+        <h2 className="text-3xl font-bold text-[#c27700] mb-4">Chancellor’s Profile: Dr. Koketso Rakhudu</h2>
+
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+          <img src="/images/chancellor.jpg" alt="Dr. Koketso Rakhudu" className="w-full md:w-1/3 rounded shadow" />
+
+          <p className="text-lg leading-relaxed">
+            Dr. Koketso Rakhudu is the Chancellor of the Koketso Rakhudu Foundation Community Education and Training Centre,
+            where he is dedicated to advancing education, fostering cultural exchange, and driving community development.
+            A prominent leader within the Royal Bafokeng Nation, he holds the title of Kgosana of the Tsitsing community.
+            <br /><br />
+            Dr. Rakhudu also serves as a Guest Lecturer and Strategic Implementation Partner at several prestigious universities,
+            including the University of South Africa and North West University, focusing on leadership and governance.
+            <br /><br />
+            Additionally, he is the Deputy Chairperson of the Provincial Council on AIDS and the Founder of The Village Economy Indaba Programme,
+            which aims to enhance economic empowerment in local communities.
+            <br /><br />
+            He collaborates with institutions like The Aurum Institute and Johns Hopkins University in national research programs,
+            and was named one of the Top 30 Fast-Rising Public Leaders by the Pan African Leadership Institute.
+          </p>
+        </div>
+      </motion.section>
 
       {/* Vision & Mission */}
       <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
@@ -81,26 +79,45 @@ const About = () => {
           Thuba Pelo Mosadi, TUT, Aurum Institute, Agape Youth, Thato Molamu, Mohale Motaung and more.
         </p>
         <p className="mt-4 text-lg">
-          <strong>Khuli Chana Foundation:</strong> Donated new school shoes to learners at Tsitsing Primary School and St. Gerald Majela,
-          promoting dignity and access to education.
+          <strong>Khuli Chana Foundation:</strong> Donated school shoes to Tsitsing Primary and St. Gerald Majela learners.
         </p>
         <p className="mt-2 text-lg">
-          <strong>Cam Life Productions:</strong> Partnering to expand digital content creation and community storytelling.
+          <strong>Cam Life Productions:</strong> Co-creating content and storytelling that highlights our communities.
         </p>
+      </motion.section>
+
+      {/* Partner Logos */}
+      <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
+        <h2 className="text-3xl font-bold text-[#c27700] mb-6 text-center">Our Partners</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-center">
+          <img src="/images/ABSA.jpeg" alt="ABSA" className="h-16 object-contain mx-auto" />
+          <img src="/images/AGRISETA.jpeg" alt="AGRISETA" className="h-16 object-contain mx-auto" />
+          <img src="/images/Aurum.jpeg" alt="Aurum" className="h-16 object-contain mx-auto" />
+          <img src="/images/CATHSETA.jpeg" alt="CATHSETA" className="h-16 object-contain mx-auto" />
+          <img src="/images/EWSETA.jpeg" alt="EWSETA" className="h-16 object-contain mx-auto" />
+          <img src="/images/HEF.jpeg" alt="HEF" className="h-16 object-contain mx-auto" />
+          <img src="/images/Classic.jpeg" alt="Classic" className="h-16 object-contain mx-auto" />
+          <img src="/images/NWDC.jpeg" alt="NWDC" className="h-16 object-contain mx-auto" />
+          <img src="/images/TUT.jpeg" alt="TUT" className="h-16 object-contain mx-auto" />
+          <img src="/images/QCTO.jpeg" alt="QCTO" className="h-16 object-contain mx-auto" />
+        </div>
       </motion.section>
 
       {/* Milestones */}
       <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
         <h2 className="text-3xl font-bold text-[#c27700] mb-4">Key Milestones</h2>
-        <ul className="list-disc ml-6 text-lg space-y-2">
-          <li>Appointment of Dr. Rakhudu as CEO of Hakem Energies Foundation</li>
-          <li>10th Anniversary of Dr. Rakhudu as Kgosana of the Royal Bafokeng Nation</li>
-          <li>Launched “Breaking the Silence” podcast to promote social awareness</li>
-          <li>Boundless Soweto Campus: A tech hub for AI, IT, and 4IR skills development</li>
-          <li>Inauguration of Dr. Rakhudu as First Chancellor of KRF</li>
-          <li>Graduation Ceremony for the Class of 2023</li>
-          <li>Launch of the Kgosana Koketso Rakhudu Excellence Awards</li>
-        </ul>
+        <div className="grid md:grid-cols-2 gap-8">
+          <ul className="list-disc ml-6 text-lg space-y-2">
+            <li>Appointment of Dr. Rakhudu as CEO of Hakem Energies Foundation</li>
+            <li>10th Anniversary of Dr. Rakhudu as Kgosana of the Royal Bafokeng Nation</li>
+            <li>Launched “Breaking the Silence” podcast</li>
+            <li>Boundless Soweto Campus: AI and 4IR Tech Hub</li>
+            <li>Inauguration of Dr. Rakhudu as First Chancellor of KRF</li>
+            <li>Graduation Ceremony for the Class of 2023</li>
+            <li>Launch of the Kgosana Koketso Rakhudu Excellence Awards</li>
+          </ul>
+          <img src="/images/milestone.jpeg" alt="Milestones" className="rounded shadow w-full h-auto" />
+        </div>
       </motion.section>
     </div>
   );

@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -17,17 +16,20 @@ const Home = () => {
     <div className="bg-white text-black font-sans">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#c27700] text-white py-24 px-6 text-center">
-        {/* Decorative Circles */}
         <div className="absolute -top-10 -left-10 w-64 h-64 bg-yellow-300 rounded-full opacity-20 animate-pulse"></div>
         <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-white rounded-full opacity-10"></div>
 
-        <motion.h1
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-extrabold mb-4"
-        >
+        <motion.div className="mb-8" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <img
+  src="/images/Inaugartion.jpeg"
+  alt="Inauguration"
+  onError={() => console.error("Image failed to load")}
+  className="w-full"
+/>
+
+        </motion.div>
+
+        <motion.h1 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-4xl md:text-5xl font-extrabold mb-4">
           Welcome to the Koketso Rakhudu Foundation
         </motion.h1>
         <motion.p
@@ -40,33 +42,27 @@ const Home = () => {
         >
           Rooted in community development and lifelong learning, we champion accessible education and skills training for all.
         </motion.p>
-        <motion.div
-          variants={fadeUp}
-          custom={2}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Link
-            to="/programmes"
-            className="bg-white text-[#c27700] font-semibold px-6 py-3 rounded hover:bg-yellow-100 transition"
-          >
+        <motion.div variants={fadeUp} custom={2} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <Link to="/programmes" className="bg-white text-[#c27700] font-semibold px-6 py-3 rounded hover:bg-yellow-100 transition">
             Explore Our Programmes
           </Link>
         </motion.div>
       </section>
 
+      {/* Foundational Vision Section */}
+      <section className="py-20 px-6 max-w-5xl mx-auto text-center">
+        <motion.h2 variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-3xl font-bold mb-6 text-[#c27700]">
+          Our Foundational Vision
+        </motion.h2>
+        <motion.p variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-gray-700 text-lg">
+          Inspired by the Royal Bafokeng Nation Vision 2035 and founded by Kgosana Dr. Koketso Rakhudu, we are committed to inclusive, community-driven development that bridges gaps in education, enterprise, and opportunity.
+        </motion.p>
+      </section>
+
       {/* Highlights */}
       <section className="py-20 px-6 max-w-5xl mx-auto">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#c27700]">
-            Our Commitment to Excellence
-          </h2>
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#c27700]">Our Commitment to Excellence</h2>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
@@ -83,9 +79,7 @@ const Home = () => {
               viewport={{ once: true }}
               className="bg-white p-6 shadow-lg rounded transition hover:shadow-xl"
             >
-              <h3 className="text-xl text-[#c27700] font-semibold mb-2">
-                {text}
-              </h3>
+              <h3 className="text-xl text-[#c27700] font-semibold mb-2">{text}</h3>
               <p className="text-sm text-gray-700">
                 Empowering historically disadvantaged individuals through education.
               </p>
@@ -94,7 +88,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Core Values Section */}
+      {/* Core Values */}
       <section className="bg-gray-100 py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <motion.h2
@@ -131,17 +125,11 @@ const Home = () => {
         </div>
       </section>
 
+     
       {/* CTA */}
       <section className="py-16 text-center">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#c27700]">
-            Join Us In Building a Brighter Future
-          </h2>
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#c27700]">Join Us In Building a Brighter Future</h2>
           <p className="text-gray-800 mb-6">
             Partner with us, support a learner, or help amplify our work through collaboration.
           </p>
