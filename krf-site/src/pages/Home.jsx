@@ -67,7 +67,7 @@ const Home = () => {
     {/* Highlights */}
 <section className="py-20 px-6 max-w-5xl mx-auto">
   {/* Image at the top (not background) */}
-  <motion.img
+  {/* <motion.img
     src="/image/Inaugartion.jpeg"
     alt="Community development"
     className="w-full h-auto mb-10 rounded shadow-lg, object-contain"
@@ -75,7 +75,7 @@ const Home = () => {
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
-  />
+  /> */}
 
   {/* Section Heading */}
   <motion.div

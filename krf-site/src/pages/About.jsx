@@ -26,11 +26,11 @@ const About = () => {
       {/* Chancellor Profile */}
       <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
           <div className="mb-6">
-    <img
+    {/* <img
       src="/images/Kgosanachancellor.jpg"
       alt="Dr. Koketso Rakhudu"
       className="w-48 mx-auto rounded shadow-md"
-    />
+    /> */}
   </div>
         <h2 className="text-3xl font-bold text-[#c27700] mb-4">Chancellor’s Profile: Dr. Koketso Rakhudu</h2>
         <p className="text-lg leading-relaxed">
