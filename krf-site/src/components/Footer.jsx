@@ -17,7 +17,6 @@ const Footer = () => (
         >
           Astral Solutions
         </a>
-        .
       </p>
 
       <p className="text-sm text-white">

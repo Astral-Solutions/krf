@@ -25,6 +25,13 @@ const About = () => {
 
       {/* Chancellor Profile */}
       <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
+          <div className="mb-6">
+    <img
+      src="/image/Kgosanachancellor.jpg"
+      alt="Dr. Koketso Rakhudu"
+      className="w-48 mx-auto rounded shadow-md"
+    />
+  </div>
         <h2 className="text-3xl font-bold text-[#c27700] mb-4">Chancellor’s Profile: Dr. Koketso Rakhudu</h2>
         <p className="text-lg leading-relaxed">
           Dr. Koketso Rakhudu is the Chancellor of the Koketso Rakhudu Foundation Community Education and Training Centre,
@@ -78,15 +85,88 @@ const About = () => {
       {/* Partnerships */}
       <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
         <h2 className="text-3xl font-bold text-[#c27700] mb-4">Key Partnerships</h2>
-        <p className="text-lg leading-relaxed">
-          SAQA, Department of Education, NWDC, EWSETA, AgriSETA, MDiHub, Maikwane Holdings, Thuba Pelo Mosadi, TUT, Aurum Institute, Agape Youth, Thato Molamu, Mohale Motaung, and more.
-        </p>
-        <p className="mt-4 text-lg">
-          <strong>Khuli Chana Foundation:</strong> Donated school shoes to learners at Tsitsing Primary and St. Gerald Majela.
-        </p>
-        <p className="mt-2 text-lg">
-          <strong>Cam Life Productions:</strong> Partnered to scale engaging digital content and storytelling.
-        </p>
+       <div className="flex flex-wrap justify-center gap-8">
+    <img
+      src="/image/partner1.png"
+      alt="Partner 1"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner2.png"
+      alt="Partner 2"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner3.png"
+      alt="Partner 3"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner4.png"
+      alt="Partner 4"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner5.png"
+      alt="Partner 5"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner6.png"
+      alt="Partner 6"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner7.png"
+      alt="Partner 7"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner8.png"
+      alt="Partner 8"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner9.png"
+      alt="Partner 9"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner10.png"
+      alt="Partner 10"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner11.png"
+      alt="Partner 11"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner12.png"
+      alt="Partner 12"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner13.png"
+      alt="Partner 13"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner14.png"
+      alt="Partner 14"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner15.png"
+      alt="Partner 15"
+      className="h-20 object-contain"
+    />
+    <img
+      src="/image/partner16.png"
+      alt="Partner 16"
+      className="h-20 object-contain"
+    />
+  </div>
       </motion.section>
 
       {/* Milestones */}

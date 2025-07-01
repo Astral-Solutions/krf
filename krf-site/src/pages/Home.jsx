@@ -15,84 +15,107 @@ const fadeUp = {
 const Home = () => {
   return (
     <div className="bg-white text-black font-sans">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#c27700] text-white py-24 px-6 text-center">
-        {/* Decorative Circles */}
-        <div className="absolute -top-10 -left-10 w-64 h-64 bg-yellow-300 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-white rounded-full opacity-10"></div>
+  {/* Hero Section */}
+  <section className="relative overflow-hidden bg-[#c27700] text-white py-24 px-6 text-center">
 
-        <motion.h1
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-extrabold mb-4"
-        >
-          Welcome to the Koketso Rakhudu Foundation
-        </motion.h1>
-        <motion.p
-          variants={fadeUp}
-          custom={1}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-lg max-w-2xl mx-auto mb-6"
-        >
-          Rooted in community development and lifelong learning, we champion accessible education and skills training for all.
-        </motion.p>
-        <motion.div
-          variants={fadeUp}
-          custom={2}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Link
-            to="/programmes"
-            className="bg-white text-[#c27700] font-semibold px-6 py-3 rounded hover:bg-yellow-100 transition"
-          >
-            Explore Our Programmes
-          </Link>
-        </motion.div>
-      </section>
+    {/* Optional dark overlay for better contrast */}
+    <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
 
-      {/* Highlights */}
-      <section className="py-20 px-6 max-w-5xl mx-auto">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#c27700]">
-            Our Commitment to Excellence
-          </h2>
-        </motion.div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            'Accredited CET under ETDP SETA',
-            'Over 8 years of community impact',
-            'Partnerships with top institutions',
-          ].map((text, i) => (
-            <motion.div
-              key={i}
-              variants={fadeUp}
-              custom={i + 1}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="bg-white p-6 shadow-lg rounded transition hover:shadow-xl"
-            >
-              <h3 className="text-xl text-[#c27700] font-semibold mb-2">
-                {text}
-              </h3>
-              <p className="text-sm text-gray-700">
-                Empowering historically disadvantaged individuals through education.
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+    {/* Decorative Circles */}
+    <div className="absolute -top-10 -left-10 w-64 h-64 bg-yellow-300 rounded-full opacity-20 animate-pulse z-10"></div>
+    <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-white rounded-full opacity-10 z-10"></div>
+
+    {/* Hero Content */}
+    <motion.h1
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="text-4xl md:text-5xl font-extrabold mb-4 relative z-10"
+    >
+      Welcome to the Koketso Rakhudu Foundation
+    </motion.h1>
+
+    <motion.p
+      variants={fadeUp}
+      custom={1}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="text-lg max-w-2xl mx-auto mb-6 relative z-10"
+    >
+      Rooted in community development and lifelong learning, we champion accessible education and skills training for all.
+    </motion.p>
+
+    <motion.div
+      variants={fadeUp}
+      custom={2}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="relative z-10"
+    >
+      <Link
+        to="/programmes"
+        className="bg-white text-[#c27700] font-semibold px-6 py-3 rounded hover:bg-yellow-100 transition"
+      >
+        Explore Our Programmes
+      </Link>
+    </motion.div>
+  </section>
+
+    {/* Highlights */}
+<section className="py-20 px-6 max-w-5xl mx-auto">
+  {/* Image at the top (not background) */}
+  <motion.img
+    src="/image/Inaugartion.jpeg"
+    alt="Community development"
+    className="w-full h-auto mb-10 rounded shadow-lg, object-contain"
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+  />
+
+  {/* Section Heading */}
+  <motion.div
+    variants={fadeUp}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+  >
+    <h2 className="text-3xl font-bold mb-8 text-center text-[#c27700]">
+      Our Commitment to Excellence
+    </h2>
+  </motion.div>
+
+  {/* Grid Items */}
+  <div className="grid md:grid-cols-3 gap-8">
+    {[
+      'Accredited CET under ETDP SETA',
+      'Over 8 years of community impact',
+      'Partnerships with top institutions',
+    ].map((text, i) => (
+      <motion.div
+        key={i}
+        variants={fadeUp}
+        custom={i + 1}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="bg-white p-6 shadow-lg rounded transition hover:shadow-xl"
+      >
+        <h3 className="text-xl text-[#c27700] font-semibold mb-2">
+          {text}
+        </h3>
+        <p className="text-sm text-gray-700">
+          Empowering historically disadvantaged individuals through education.
+        </p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
 
       {/* Core Values Section */}
       <section className="bg-gray-100 py-20 px-6">
