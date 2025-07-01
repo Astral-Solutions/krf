@@ -27,7 +27,7 @@ const About = () => {
       <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
           <div className="mb-6">
     <img
-      src="/image/Kgosanachancellor.jpg"
+      src="/images/Kgosanachancellor.jpg"
       alt="Dr. Koketso Rakhudu"
       className="w-48 mx-auto rounded shadow-md"
     />
@@ -87,77 +87,77 @@ const About = () => {
         <h2 className="text-3xl font-bold text-[#c27700] mb-4">Key Partnerships</h2>
        <div className="flex flex-wrap justify-center gap-8">
     <img
-      src="/image/partner1.jpg"
+      src="/images/partner1.jpg"
       alt="Partner 1"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner2.jpg"
+      src="/images/partner2.jpg"
       alt="Partner 2"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner3.jpg"
+      src="/images/partner3.jpg"
       alt="Partner 3"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner4.jpg"
+      src="/images/partner4.jpg"
       alt="Partner 4"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner5.jpg"
+      src="/images/partner5.jpg"
       alt="Partner 5"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner6.jpg"
+      src="/images/partner6.jpg"
       alt="Partner 6"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner7.jpg"
+      src="/images/partner7.jpg"
       alt="Partner 7"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner8.jpg"
+      src="/images/partner8.jpg"
       alt="Partner 8"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner9.jpg"
+      src="/images/partner9.jpg"
       alt="Partner 9"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner10.jpg"
+      src="/images/partner10.jpg"
       alt="Partner 10"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner11.jpg"
+      src="/images/partner11.jpg"
       alt="Partner 11"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner12.jpg"
+      src="/images/partner12.jpg"
       alt="Partner 12"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner13.jpg"
+      src="/images/partner13.jpg"
       alt="Partner 13"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner14.jpg"
+      src="/images/partner14.jpg"
       alt="Partner 14"
       className="h-20 object-contain"
     />
     <img
-      src="/image/partner15.jpg"
+      src="/images/partner15.jpg"
       alt="Partner 15"
       className="h-20 object-contain"
     />
