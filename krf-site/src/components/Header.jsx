@@ -19,43 +19,67 @@ const Header = () => {
           />
         </Link>
 
-        {/* Desktop Nav - Updated Order with Services after About */}
+        {/* Desktop Nav - Updated with new links */}
         <ul className="hidden md:flex space-x-6 font-medium text-[#c27700] text-sm">
           <li>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
             >
               About
             </Link>
           </li>
           <li>
-            <Link 
-              to="/services" 
+            <Link
+              to="/leadership"
+              className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
+            >
+              Leadership
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/services"
               className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
             >
               Services
             </Link>
           </li>
           <li>
-            <Link 
-              to="/programmes" 
+            <Link
+              to="/programmes"
               className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
             >
               Programmes
             </Link>
           </li>
           <li>
-            <Link 
-              to="/impact" 
+            <Link
+              to="/impact"
               className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
             >
               Impact
             </Link>
           </li>
           <li>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/milestones"
+              className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
+            >
+              Milestones
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/gallery"
+              className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
+            >
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
               className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
             >
               Contact
@@ -80,12 +104,12 @@ const Header = () => {
         </button>
       </nav>
 
-      {/* Mobile Dropdown - Updated Order */}
+      {/* Mobile Dropdown - Updated with new links */}
       {menuOpen && (
         <ul className="md:hidden bg-white px-6 py-4 space-y-3 font-medium text-[#c27700] shadow-sm border-t border-gray-200">
           <li>
-            <Link 
-              to="/donate" 
+            <Link
+              to="/donate"
               onClick={() => setMenuOpen(false)}
               className="inline-block w-full bg-[#c27700] text-white px-4 py-3 text-center rounded-full hover:bg-[#a25e00] transition font-semibold"
             >
@@ -93,9 +117,12 @@ const Header = () => {
             </Link>
           </li>
           <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+          <li><Link to="/leadership" onClick={() => setMenuOpen(false)}>Leadership</Link></li>
           <li><Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link></li>
           <li><Link to="/programmes" onClick={() => setMenuOpen(false)}>Programmes</Link></li>
           <li><Link to="/impact" onClick={() => setMenuOpen(false)}>Impact</Link></li>
+          <li><Link to="/milestones" onClick={() => setMenuOpen(false)}>Milestones</Link></li>
+          <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
           <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
       )}
