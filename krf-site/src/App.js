@@ -12,6 +12,7 @@ import Contact from './pages/Contact.jsx';
 import Services from './pages/Services.jsx';
 import Layout from './components/Layout.jsx';
 import Milestones from './pages/Milestones.jsx';
+import Leadership from './pages/Leadership.jsx';
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="/impact" element={<Impact />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/milestones" element={<Milestones />} />
+            <Route path="/leadership" element={<Leadership />} />
           </Routes>
         </main>
         <Footer />
