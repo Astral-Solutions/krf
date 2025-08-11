@@ -13,6 +13,7 @@ import Services from './pages/Services.jsx';
 import Layout from './components/Layout.jsx';
 import Milestones from './pages/Milestones.jsx';
 import Leadership from './pages/Leadership.jsx';
+import Registration from './pages/Registration.jsx';
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/milestones" element={<Milestones />} />
             <Route path="/leadership" element={<Leadership />} />
+            <Route path="/registration" element={<Registration />} />
           </Routes>
         </main>
         <Footer />

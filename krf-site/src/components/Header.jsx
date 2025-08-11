@@ -39,6 +39,14 @@ const Header = () => {
           </li>
           <li>
             <Link
+              to="/registration"
+              className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
+            >
+              Registration
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/services"
               className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
             >
@@ -124,6 +132,7 @@ const Header = () => {
           <li><Link to="/milestones" onClick={() => setMenuOpen(false)}>Milestones</Link></li>
           <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
           <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+          <li><Link to="/registration" onClick={() => setMenuOpen(false)}>Registration</Link></li>
         </ul>
       )}
     </header>
