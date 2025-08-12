@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { User, Mail, Phone, MapPin, GraduationCap, CreditCard, CheckCircle, AlertCircle, Upload, FileText, Users, Calendar, DollarSign, Shield } from "lucide-react";
+import { User, MapPin, GraduationCap, CheckCircle, AlertCircle, Upload, FileText, Users, Calendar, Shield } from "lucide-react";
 
 const programmes = [
   { id: 1, name: "3-Month Skills Development", fee: 2500, duration: "3 months", targetGroup: "Youth and Women aged 18-35" },
@@ -106,60 +106,63 @@ const Registration = () => {
   const validateStep = (step) => {
     const newErrors = {};
     
-    switch (step) {
-      case 1: // Personal Information
-        if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-        if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
-        if (!formData.idNumber.trim()) newErrors.idNumber = 'ID number is required';
-        if (formData.idNumber && !/^\d{13}$/.test(formData.idNumber)) newErrors.idNumber = 'ID number must be 13 digits';
-        if (!formData.email.trim()) newErrors.email = 'Email is required';
-        if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
-        if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-        if (formData.phone && !/^\d{10}$/.test(formData.phone.replace(/\s/g, ''))) newErrors.phone = 'Phone number must be 10 digits';
-        break;
-        
-      case 2: // Address Information
-        if (!formData.streetAddress.trim()) newErrors.streetAddress = 'Street address is required';
-        if (!formData.city.trim()) newErrors.city = 'City is required';
-        if (!formData.province.trim()) newErrors.province = 'Province is required';
-        if (!formData.postalCode.trim()) newErrors.postalCode = 'Postal code is required';
-        if (formData.postalCode && !/^\d{4}$/.test(formData.postalCode)) newErrors.postalCode = 'Postal code must be 4 digits';
-        break;
-        
-      case 3: // Educational & Employment
-        if (!formData.highestQualification.trim()) newErrors.highestQualification = 'Highest qualification is required';
-        if (!formData.employmentStatus.trim()) newErrors.employmentStatus = 'Employment status is required';
-        if (formData.highestQualification !== 'No formal qualification' && !formData.institutionName.trim()) {
-          newErrors.institutionName = 'Institution name is required';
-        }
-        break;
-        
-      case 4: // Programme Selection
-        if (!formData.selectedProgramme) newErrors.selectedProgramme = 'Please select a programme';
-        if (!formData.startDate) newErrors.startDate = 'Start date is required';
-        if (!formData.motivation.trim()) newErrors.motivation = 'Motivation is required';
-        if (formData.motivation && formData.motivation.length < 50) newErrors.motivation = 'Motivation must be at least 50 characters';
-        break;
-        
-      case 5: // Emergency Contact
-        if (!formData.emergencyContactName.trim()) newErrors.emergencyContactName = 'Emergency contact name is required';
-        if (!formData.emergencyContactPhone.trim()) newErrors.emergencyContactPhone = 'Emergency contact phone is required';
-        if (!formData.emergencyContactRelation.trim()) newErrors.emergencyContactRelation = 'Relationship is required';
-        break;
-        
-      case 6: // Documents & Payment
-        if (!formData.documents.idCopy) newErrors.idCopy = 'ID copy is required';
-        if (!formData.documents.qualificationCertificate && formData.highestQualification !== 'No formal qualification') {
-          newErrors.qualificationCertificate = 'Qualification certificate is required';
-        }
-        if (!formData.paymentMethod) newErrors.paymentMethod = 'Payment method is required';
-        if (!formData.agreedToTerms) newErrors.agreedToTerms = 'You must agree to terms and conditions';
-        break;
-    }
+switch (step) {
+  case 1: // Personal Information
+    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+    if (!formData.idNumber.trim()) newErrors.idNumber = 'ID number is required';
+    if (formData.idNumber && !/^\d{13}$/.test(formData.idNumber)) newErrors.idNumber = 'ID number must be 13 digits';
+    if (!formData.email.trim()) newErrors.email = 'Email is required';
+    if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
+    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
+    if (formData.phone && !/^\d{10}$/.test(formData.phone.replace(/\s/g, ''))) newErrors.phone = 'Phone number must be 10 digits';
+    break;
     
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  case 2: // Address Information
+    if (!formData.streetAddress.trim()) newErrors.streetAddress = 'Street address is required';
+    if (!formData.city.trim()) newErrors.city = 'City is required';
+    if (!formData.province.trim()) newErrors.province = 'Province is required';
+    if (!formData.postalCode.trim()) newErrors.postalCode = 'Postal code is required';
+    if (formData.postalCode && !/^\d{4}$/.test(formData.postalCode)) newErrors.postalCode = 'Postal code must be 4 digits';
+    break;
+    
+  case 3: // Educational & Employment
+    if (!formData.highestQualification.trim()) newErrors.highestQualification = 'Highest qualification is required';
+    if (!formData.employmentStatus.trim()) newErrors.employmentStatus = 'Employment status is required';
+    if (formData.highestQualification !== 'No formal qualification' && !formData.institutionName.trim()) {
+      newErrors.institutionName = 'Institution name is required';
+    }
+    break;
+    
+  case 4: // Programme Selection
+    if (!formData.selectedProgramme) newErrors.selectedProgramme = 'Please select a programme';
+    if (!formData.startDate) newErrors.startDate = 'Start date is required';
+    if (!formData.motivation.trim()) newErrors.motivation = 'Motivation is required';
+    if (formData.motivation && formData.motivation.length < 50) newErrors.motivation = 'Motivation must be at least 50 characters';
+    break;
+    
+  case 5: // Emergency Contact
+    if (!formData.emergencyContactName.trim()) newErrors.emergencyContactName = 'Emergency contact name is required';
+    if (!formData.emergencyContactPhone.trim()) newErrors.emergencyContactPhone = 'Emergency contact phone is required';
+    if (!formData.emergencyContactRelation.trim()) newErrors.emergencyContactRelation = 'Relationship is required';
+    break;
+    
+  case 6: // Documents & Payment
+    if (!formData.documents.idCopy) newErrors.idCopy = 'ID copy is required';
+    if (!formData.documents.qualificationCertificate && formData.highestQualification !== 'No formal qualification') {
+      newErrors.qualificationCertificate = 'Qualification certificate is required';
+    }
+    if (!formData.paymentMethod) newErrors.paymentMethod = 'Payment method is required';
+    if (!formData.agreedToTerms) newErrors.agreedToTerms = 'You must agree to terms and conditions';
+    break;
+    
+  default:
+    break;
+}
+
+setErrors(newErrors);
+return Object.keys(newErrors).length === 0;
+};
 
   const nextStep = () => {
     if (validateStep(currentStep)) {
@@ -864,8 +867,8 @@ const Registration = () => {
                     onChange={(e) => handleInputChange('agreedToTerms', e.target.checked)}
                   />
                   <label htmlFor="agreeTerms" className="text-sm text-gray-700 leading-relaxed">
-                    I agree to the <a href="#" className="text-orange-600 hover:underline">Terms and Conditions</a> and 
-                    <a href="#" className="text-orange-600 hover:underline ml-1">Privacy Policy</a>. I understand that:
+                    I agree to the <button type="button" className="text-orange-600 hover:underline bg-transparent border-none p-0 cursor-pointer">Terms and Conditions</button> and 
+<button type="button" className="text-orange-600 hover:underline ml-1 bg-transparent border-none p-0 cursor-pointer">Privacy Policy</button>. I understand that:
                     <ul className="list-disc list-inside mt-2 space-y-1 text-xs text-gray-600">
                       <li>Registration fees are non-refundable once the programme starts</li>
                       <li>I must attend a minimum of 80% of classes to receive certification</li>
@@ -1052,6 +1055,7 @@ const Registration = () => {
         </div>
       </div>
     </div>
+
   );
 };
 
