@@ -69,16 +69,19 @@ const About = () => {
 
       {/* Core Values */}
       <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
-        <h2 className="text-3xl font-bold text-[#c27700] mb-4">Core Values</h2>
+        <h2 className="text-3xl font-bold text-[#c27700] mb-4">Our Core Values</h2>
+        <p className="text-lg leading-relaxed mb-6">
+          At our Community Education & Training Centre, we are grounded in a shared commitment to excellence, 
+          guided by these fundamental principles that shape everything we do.
+        </p>
         <ul className="space-y-4 text-lg">
-          <li><strong>Lifelong Learning 📚</strong>: We cultivate a culture of ongoing growth and development.</li>
-          <li><strong>Community Empowerment 🤝</strong>: We empower communities with knowledge and self-determination.</li>
-          <li><strong>Excellence in Education 🎓</strong>: We uphold innovation and impact in all educational pursuits.</li>
-          <li><strong>Inclusivity & Diversity 🌍</strong>: We honor and integrate diverse perspectives and backgrounds.</li>
-          <li><strong>Ethical Leadership 🧭</strong>: We lead with purpose, transparency, and accountability.</li>
-          <li><strong>Community-Centric Approach</strong>: Our solutions are crafted with local ownership and impact in mind.</li>
-          <li><strong>Sustainability</strong>: Every project aims for lasting transformation and resilience.</li>
-          <li><strong>Collaboration</strong>: We join forces with diverse stakeholders to multiply success.</li>
+          <li><strong>1. Lifelong Learning</strong>: We believe that education is a continuous journey that empowers individuals at every stage of life, fostering growth, adaptability, and personal development.</li>
+          <li><strong>2. Integrity & Accountability</strong>: We uphold ethical decision-making, transparency, and responsibility in all our actions.</li>
+          <li><strong>3. Excellence</strong>: We strive for the highest standards in teaching, leadership and operational delivery.</li>
+          <li><strong>4. Inclusivity and Equity</strong>: We provide learning opportunities that embrace and respect diversity ensuring no one is left behind.</li>
+          <li><strong>5. Innovation & Curiosity</strong>: We nurture critical thinking, creativity, and forward-thinking solutions to today's challenges.</li>
+          <li><strong>6. Community Empowerment</strong>: We serve as a bridge between individuals and opportunity, fostering sustainable development and resilience in our communities.</li>
+          <li><strong>7. Collaboration & Partnership</strong>: We recognize that stakeholder synergy is key to creating meaningful and scalable impact.</li>
         </ul>
       </motion.section>
 
