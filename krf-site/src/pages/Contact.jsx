@@ -40,8 +40,8 @@ const Contact = () => {
                 <div className="flex items-center space-x-3">
                   <MapPin className="text-[#c27700]" size={20} />
                   <div>
-                    <p className="font-semibold">Address</p>
-                    <p className="text-gray-700"></p>
+                    <p className="font-semibold">Website</p>
+                    <p className="text-gray-700">www.drkoketsorakhudu.com</p>
                   </div>
                 </div>
 
