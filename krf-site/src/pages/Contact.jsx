@@ -57,7 +57,7 @@ const Contact = () => {
                   <Mail className="text-[#c27700]" size={20} />
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-gray-700">info@krf.org.za</p>
+                    <p className="text-gray-700">admin@koketsorakhudufoundation.com</p>
                   </div>
                 </div>
               </div>
