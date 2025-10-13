@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Globe, Phone, Mail, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -38,7 +38,7 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <MapPin className="text-[#c27700]" size={20} />
+                  <Globe className="text-[#c27700]" size={20} />
                   <div>
                     <p className="font-semibold">Website</p>
                     <p className="text-gray-700">www.drkoketsorakhudu.com</p>
