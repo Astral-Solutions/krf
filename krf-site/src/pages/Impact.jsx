@@ -105,10 +105,8 @@ const Impact = () => {
   const [modalData, setModalData] = useState(null);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
-  // Calculate total people impacted
-  const totalPeopleImpacted = Object.values(impactStatsByYear)
-    .flat()
-    .reduce((total, program) => total + program.count, 0);
+  // Total beneficiaries from the data
+  const totalPeopleImpacted = 3267;
 
   return (
     <div className="bg-gradient-to-br from-orange-50 to-yellow-50 text-black px-6 py-16 relative">
@@ -144,20 +142,97 @@ const Impact = () => {
           </p>
         </motion.div>
 
-        {/* People Impacted Counter */}
+        {/* Key Statistics Grid */}
         <motion.div 
-          className="mb-12 text-center bg-gradient-to-r from-[#c27700] to-[#e69500] text-white p-8 rounded-lg"
+          className="mb-12 grid sm:grid-cols-2 md:grid-cols-4 gap-6"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           custom={2}
         >
-          <h2 className="text-3xl font-bold mb-4">People Impacted</h2>
-          <div className="text-6xl font-extrabold">
-            <AnimatedCounter targetCount={totalPeopleImpacted} />
+          <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#c27700]">
+            <div className="text-4xl font-extrabold text-[#c27700] mb-2">
+              <AnimatedCounter targetCount={totalPeopleImpacted} />
+            </div>
+            <p className="text-sm font-semibold text-gray-700 mb-1">Total Beneficiaries</p>
+            <p className="text-xs text-gray-600">Lives transformed</p>
           </div>
-          <p className="text-xl mt-2">Lives Changed Through Our Programs</p>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#c27700]">
+            <div className="text-4xl font-extrabold text-[#c27700] mb-2">R5.7M</div>
+            <p className="text-sm font-semibold text-gray-700 mb-1">Investment Value</p>
+            <p className="text-xs text-gray-600">Community Impact</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#c27700]">
+            <div className="text-4xl font-extrabold text-[#c27700] mb-2">25+</div>
+            <p className="text-sm font-semibold text-gray-700 mb-1">Training Programmes</p>
+            <p className="text-xs text-gray-600">Diverse Offering</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#c27700]">
+            <div className="text-4xl font-extrabold text-[#c27700] mb-2">3</div>
+            <p className="text-sm font-semibold text-gray-700 mb-1">Training Centers</p>
+            <p className="text-xs text-gray-600">Regional Coverage</p>
+          </div>
+        </motion.div>
+
+        {/* Learner Demographics */}
+        <motion.div 
+          className="mb-12"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={3}
+        >
+          <h2 className="text-3xl font-bold text-[#c27700] mb-8 text-center">Learner Demographics</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-[#c27700] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <span className="text-2xl">👔</span>
+              </div>
+              <h3 className="font-semibold text-gray-800 text-center mb-2">Adults (18-55)</h3>
+              <p className="text-sm text-gray-600 text-center">Career Change and Upskilling</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-[#c27700] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <span className="text-2xl">🏢</span>
+              </div>
+              <h3 className="font-semibold text-gray-800 text-center mb-2">Corporate</h3>
+              <p className="text-sm text-gray-600 text-center">SMEs & Public Sector</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-[#c27700] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="font-semibold text-gray-800 text-center mb-2">School Leavers & Youth</h3>
+              <p className="text-sm text-gray-600 text-center">Future workforce preparation</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-[#c27700] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <span className="text-2xl">🤝</span>
+              </div>
+              <h3 className="font-semibold text-gray-800 text-center mb-2">Underemployed</h3>
+              <p className="text-sm text-gray-600 text-center">Community Members</p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Key Achievements Section */}
+        <motion.div 
+          className="mb-12"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={4}
+        >
+          <h2 className="text-3xl font-bold text-[#c27700] mb-8 text-center">Key Achievements Since 2016</h2>
         </motion.div>
 
         {/* Testimonials Section */}
@@ -167,7 +242,7 @@ const Impact = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          custom={3}
+          custom={5}
         >
           <h2 className="text-3xl font-bold text-[#c27700] mb-8 text-center">Testimonials</h2>
           <div className="bg-white p-6 rounded-lg shadow-md">
