@@ -54,17 +54,19 @@ const About = () => {
       {/* Vision & Mission */}
       <motion.section variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
         <h2 className="text-3xl font-bold text-[#c27700] mb-4">Vision & Mission</h2>
-        <p className="text-lg mb-4"><strong>Vision:</strong> To empower lives with excellence by providing high-quality, relevant, and accessible education.</p>
-        <p className="text-lg"><strong>Mission:</strong></p>
-        <ul className="list-disc ml-6 mt-2 space-y-2 text-lg">
-          <li>Delivering accredited skills programmes and full qualifications</li>
-          <li>Supporting lifelong learning and recognition of prior learning</li>
-          <li>Hosting practical, outcome-based workshops</li>
-          <li>Partnering with reputable suppliers and SETAs</li>
-          <li>Fostering a high-performance, participatory work culture</li>
-          <li>Continuously improving our training systems and solutions</li>
-          <li>Aligning development with the Royal Bafokeng Nation Vision 2035</li>
-        </ul>
+        <div className="mb-6">
+          <p className="text-lg mb-2"><strong>Vision</strong></p>
+          <p className="text-lg leading-relaxed mb-2">
+            Creating a community where every individual has access to quality education and training opportunities that unlock their full potential and contribute to sustainable community development.
+          </p>
+          <p className="text-lg italic text-[#c27700] mb-4">"Empowering Lives with Excellence"</p>
+        </div>
+        <div>
+          <p className="text-lg mb-2"><strong>Mission</strong></p>
+          <p className="text-lg leading-relaxed">
+            A forward-thinking education approach focused on challenging, innovative, personalized learning within our community-based space. We nurture and inspire students to achieve personal excellence while embracing diversity, developing character and self-worth, guided by our values of empathy, excellence, integrity and respect.
+          </p>
+        </div>
       </motion.section>
 
       {/* Core Values */}
