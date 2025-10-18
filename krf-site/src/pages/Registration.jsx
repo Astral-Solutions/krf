@@ -1051,7 +1051,7 @@ return Object.keys(newErrors).length === 0;
         
         {/* Footer */}
         <div className="text-center mt-8 text-gray-500 text-sm">
-          <p>Need help? Contact us at <a href="mailto:info@skillsdevelopment.org" className="text-orange-600 hover:underline">info@skillsdevelopment.org</a> or call 011 123 4567</p>
+          <p>Need help? Contact us at <a href="mailto:admin@koketsorakhudufoundation.comer:underline">info@skillsdevelopment.org</a> or call +27 63 644 5723</p>
         </div>
       </div>
     </div>
