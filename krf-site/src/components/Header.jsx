@@ -29,7 +29,7 @@ const Header = () => {
               About
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/leadership"
               className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
@@ -44,7 +44,7 @@ const Header = () => {
             >
               Registration
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               to="/impact"
@@ -67,17 +67,17 @@ const Header = () => {
               to="/servicesprograms"
               className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
             >
-              ServicesPrograms
+              Services & Programs
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/gallery"
               className="hover:text-[#a25e00] transition-colors duration-200 hover:underline"
             >
               Gallery
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               to="/contact"
@@ -118,12 +118,12 @@ const Header = () => {
             </Link>
           </li>
           <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
-          <li><Link to="/leadership" onClick={() => setMenuOpen(false)}>Leadership</Link></li>
+          {/* <li><Link to="/leadership" onClick={() => setMenuOpen(false)}>Leadership</Link></li> */}
           <li><Link to="/impact" onClick={() => setMenuOpen(false)}>Impact</Link></li>
           <li><Link to="/milestones" onClick={() => setMenuOpen(false)}>Milestones</Link></li>
-          <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
+          {/* <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li> */}
           <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
-          <li><Link to="/registration" onClick={() => setMenuOpen(false)}>Registration</Link></li>
+          {/* <li><Link to="/registration" onClick={() => setMenuOpen(false)}>Registration</Link></li> */}
           <li><Link to="/servicesPrograms" onClick={()=> setMenuOpen(false)}>ServicesPrograms</Link></li>
         </ul>
       )}

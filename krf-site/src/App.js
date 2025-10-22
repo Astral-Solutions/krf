@@ -13,6 +13,7 @@ import Milestones from './pages/Milestones.jsx';
 import Leadership from './pages/Leadership.jsx';
 import Registration from './pages/Registration.jsx';
 import ServicesPrograms from './pages/ServicesPrograms.jsx';
+import Events from './pages/Events.jsx';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/academics" element={<Academics />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/impact" element={<Impact />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/milestones" element={<Milestones />} />
             <Route path="/leadership" element={<Leadership />} />

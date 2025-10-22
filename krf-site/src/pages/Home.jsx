@@ -1,210 +1,297 @@
-// src/pages/Home.jsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: (i = 1) => ({
+  show: (i = 1) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.6 },
+    transition: { delay: i * 0.2, duration: 0.8, ease: "easeOut" },
   }),
 };
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-br from-orange-50 to-yellow-50 text-black font-sans relative">
-      {/* Background Design Elements */}
-      <div className="fixed top-10 left-10 w-32 h-32 border-4 border-[#c27700] rounded-full opacity-20 animate-pulse"></div>
-      <div className="fixed top-1/3 right-20 w-16 h-16 bg-[#c27700] rounded-full opacity-10"></div>
-      <div className="fixed bottom-20 left-1/4 w-24 h-1 bg-gradient-to-r from-[#c27700] to-yellow-400 opacity-30"></div>
-      <div className="fixed bottom-1/3 right-10 w-1 h-32 bg-gradient-to-t from-[#c27700] to-yellow-400 opacity-30"></div>
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#c27700] to-[#e69500] text-white py-24 px-6 text-center">
-        {/* Decorative Circles */}
-        <div className="absolute -top-10 -left-10 w-64 h-64 bg-yellow-300 rounded-full opacity-20 animate-pulse z-10"></div>
-        <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-white rounded-full opacity-10 z-10"></div>
-        
-        {/* Additional Design Elements */}
-        <div className="absolute top-1/4 right-1/4 w-2 h-20 bg-white opacity-20 transform rotate-45"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-16 h-2 bg-white opacity-20"></div>
-
-        {/* Hero Content */}
+    <div className="bg-white text-black font-sans overflow-hidden">
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative bg-gradient-to-br from-[#c27700] to-[#e69500] py-24 px-6 text-center text-white">
         <motion.h1
           variants={fadeUp}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-extrabold mb-4 relative z-10"
+          animate="show"
+          className="text-5xl md:text-6xl font-bold mb-6"
         >
-          Welcome to the Koketso Rakhudu Foundation
+          Empowering Generations. Transforming Communities.
         </motion.h1>
-
         <motion.p
           variants={fadeUp}
-          custom={1}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-lg max-w-2xl mx-auto mb-6 relative z-10"
+          animate="show"
+          custom={1}
+          className="text-lg md:text-xl max-w-3xl mx-auto mb-6"
         >
-          Rooted in community development and lifelong learning, we champion accessible education and skills training for all.
+          The Koketso Rakhudu Foundation is a beacon of educational excellence
+          and social innovation — empowering South Africans through accredited
+          training, leadership development, and community impact.
+        </motion.p>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={2}
+          className="opacity-90 mb-10"
+        >
+          🎓 Accredited by ETDP SETA • 🤝 Rooted in Community • 🌍 Driven by Impact
         </motion.p>
 
         <motion.div
           variants={fadeUp}
-          custom={2}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="relative z-10 space-y-4"
+          animate="show"
+          custom={3}
+          className="flex justify-center gap-4 flex-wrap"
         >
-          <Link
-            to="/donate"
-            className="bg-white text-[#c27700] font-bold px-8 py-4 rounded-full hover:bg-yellow-100 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 inline-block mr-4 text-lg"
-          >
-            Donate Now!!!
-          </Link>
-          <br />
           <Link
             to="/programmes"
-            className="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 rounded-full hover:bg-white hover:text-[#c27700] transition-all duration-300 inline-block"
+            className="bg-white text-[#c27700] px-6 py-3 rounded-lg font-semibold hover:bg-yellow-100 transition"
           >
-            Explore Our Programmes
+            Explore Our Programs
+          </Link>
+          <Link
+            to="/donate"
+            className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#c27700] transition"
+          >
+            Partner With Us
           </Link>
         </motion.div>
       </section>
 
-      {/* Core Values Section - Moved to Top */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-20 px-6 relative">
-        {/* Background Design Elements */}
-        <div className="absolute top-10 right-10 w-20 h-20 border-2 border-[#c27700] rounded-full opacity-10"></div>
-        <div className="absolute bottom-20 left-20 w-32 h-2 bg-[#c27700] opacity-10 rounded-full"></div>
-        
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-center mb-10 text-[#c27700]"
-          >
-            Our Core Values
-          </motion.h2>
-          {/* Uniform layout - one per line on mobile, 3 per line on desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              ['Lifelong Learning', 'Education doesn\'t end in the classroom.'],
-              ['Community Empowerment', 'We believe change starts locally.'],
-              ['Excellence in Education', 'We aim for innovation and impact.'],
-            ].map(([title, desc], i) => (
-              <motion.div
-                key={i}
-                variants={fadeUp}
-                custom={i + 1}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#c27700] transform hover:-translate-y-1"
-              >
-                <h3 className="text-lg font-bold text-[#c27700] mb-2">{title}</h3>
-                <p className="text-gray-700">{desc}</p>
-              </motion.div>
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto">
-            {[
-              ['Inclusivity & Diversity', 'Everyone belongs in our community.'],
-              ['Ethical Leadership', 'We lead with integrity and purpose.'],
-            ].map(([title, desc], i) => (
-              <motion.div
-                key={i + 3}
-                variants={fadeUp}
-                custom={i + 4}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-[#c27700] transform hover:-translate-y-1"
-              >
-                <h3 className="text-lg font-bold text-[#c27700] mb-2">{title}</h3>
-                <p className="text-gray-700">{desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Commitment to Excellence - Updated Content */}
-      <section className="py-20 px-6 max-w-5xl mx-auto relative">
-        {/* Background Design Elements */}
-        <div className="absolute top-0 left-0 w-16 h-16 border-4 border-[#c27700] opacity-10 rounded-full"></div>
-        <div className="absolute bottom-10 right-10 w-24 h-1 bg-[#c27700] opacity-20"></div>
-
-        {/* Section Heading */}
-        <motion.div
+      {/* ================= OUR PURPOSE ================= */}
+      <section className="py-20 bg-white text-center">
+        <motion.h2
           variants={fadeUp}
           initial="hidden"
-          whileInView="visible"
+          whileInView="show"
           viewport={{ once: true }}
-          className="text-center"
+          className="text-4xl font-bold text-[#c27700] mb-6"
         >
-          <h2 className="text-3xl font-bold mb-8 text-[#c27700]">
-            Our Commitment to Excellence Over a Decade in Community Excellence
-          </h2>
-        </motion.div>
+          Education is the Foundation of Transformation
+        </motion.h2>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          custom={1}
+          viewport={{ once: true }}
+          className="text-lg text-gray-700 max-w-4xl mx-auto mb-10"
+        >
+          Since its founding, the Koketso Rakhudu Foundation has stood at the
+          intersection of education, empowerment, and leadership — bridging the
+          gap between potential and opportunity.
+        </motion.p>
 
-        {/* Grid Items */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center text-lg font-semibold text-gray-800">
+          <div>📘 3 000+ Learners Empowered</div>
+          <div>💼 100+ Accredited Workshops</div>
+          <div>🏫 3 Training Centres</div>
+          <div>🌱 9 Years of Impact</div>
+        </div>
+
+        {/* Centered Image */}
+        <div className="mt-12 flex justify-center">
+  <img
+    src="/images/GraduationStudents.jpg"
+    alt="Graduation"
+    className="max-w-md md:max-w-lg w-full h-auto object-cover rounded-xl shadow-lg mx-auto"
+    loading="lazy"
+  />
+</div>
+      </section>
+
+      {/* ================= CORE VALUES ================= */}
+      <section className="py-20 bg-[#fffaf5]">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-[#c27700] text-center mb-12"
+        >
+          Our Core Values
+        </motion.h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto text-center">
           {[
-            'Accredited CET under ETDP SETA',
-            'Over 8 years of community impact',
-            'Partnerships with top institutions',
-          ].map((text, i) => (
+            { title: "Lifelong Learning", desc: "Education is a continuous journey empowering individuals to grow and adapt." },
+            { title: "Integrity & Accountability", desc: "We uphold ethical leadership and transparent governance in everything we do." },
+            { title: "Excellence", desc: "Striving for innovation and quality in teaching, training, and impact." },
+            { title: "Inclusivity & Equity", desc: "We create equal opportunities that embrace diversity and accessibility." },
+            { title: "Innovation & Curiosity", desc: "Driving creativity and forward-thinking in education and community upliftment." },
+            { title: "Community Empowerment", desc: "Building resilience and self-sufficiency through people-centered initiatives." },
+            { title: "Collaboration & Partnership", desc: "Harnessing collective strength to scale our impact together." },
+          ].map((item, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
-              custom={i + 1}
               initial="hidden"
-              whileInView="visible"
+              whileInView="show"
+              custom={i}
               viewport={{ once: true }}
-              className="bg-white p-6 shadow-lg rounded-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2 border-t-4 border-[#c27700]"
+              className="bg-white rounded-lg shadow p-6 hover:shadow-xl transition"
             >
-              <h3 className="text-xl text-[#c27700] font-semibold mb-2">
-                {text}
+              <h3 className="text-xl font-semibold text-[#c27700] mb-3">
+                {item.title}
               </h3>
-              <p className="text-sm text-gray-700">
-                Empowering historically disadvantaged individuals through education.
-              </p>
+              <p className="text-gray-700">{item.desc}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 text-center bg-gradient-to-r from-[#c27700] to-[#e69500] text-white relative">
-        {/* Background Design Elements */}
-        <div className="absolute top-5 left-5 w-10 h-10 border-2 border-white opacity-30 rounded-full"></div>
-        <div className="absolute bottom-5 right-5 w-16 h-1 bg-white opacity-30"></div>
-        
+      {/* ================= FEATURED PROGRAMS ================= */}
+      <section className="py-20 bg-white">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-[#c27700] text-center mb-12"
+        >
+          Featured Programmes
+        </motion.h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {[
+            {
+              title: "Village Economy Indaba Programme",
+              img: "/images/TVEILogo.png",
+              desc: "12-month programme driving rural entrepreneurship and inclusive economic development.",
+            },
+            {
+              title: "BMW YES Programme",
+              img: "/images/BMW.jpg",
+              desc: "Empowering unemployed youth through workplace readiness and accredited employability training.",
+            },
+            {
+              title: "Microsoft Development Programme",
+              img: "/images/IT.jpeg",
+              desc: "Digital transformation initiative preparing learners for ICT and 4IR opportunities.",
+            },
+            {
+              title: "LPG CSI Hakem Energies Training Initiative",
+              img: "/images/LPGStakeholders.jpeg",
+              desc: "Promoting green energy, sustainability, and technical skills for future-ready employment.",
+            },
+          ].map((prog, i) => (
+            <motion.div
+              key={i}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              custom={i}
+              viewport={{ once: true }}
+              className="bg-gray-50 rounded-lg shadow hover:shadow-lg transition overflow-hidden flex flex-col items-center text-center"
+            >
+              <div className="flex justify-center items-center bg-white w-full h-48">
+                <img
+                  src={prog.img}
+                  alt={prog.title}
+                  className="max-h-40 w-auto object-contain mx-auto"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-semibold text-[#c27700] mb-2">
+                  {prog.title}
+                </h3>
+                <p className="text-sm text-gray-600">{prog.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            to="/servicesprograms"
+            className="bg-[#c27700] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#a25e00] transition"
+          >
+            View All Programmes
+          </Link>
+        </div>
+      </section>
+
+      {/* ================= IMPACT SECTION ================= */}
+      <section className="py-20 bg-[#fffaf0] text-center">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-[#c27700] mb-10"
+        >
+          Every Learner. Every Community. Every Generation — Transformed.
+        </motion.h2>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+          {[ 
+            { number: "9+", label: "Years of Service" },
+            { number: "25+", label: "Communities Reached" },
+            { number: "R5.7M", label: "Invested in Education" },
+            { number: "3", label: "Training Centres" },
+            { number: "40.2%", label: "Graduate Progression Rate" },
+          ].map((stat, i) => (
+            <motion.div
+              key={i}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              custom={i}
+              viewport={{ once: true }}
+            >
+              <p className="text-4xl font-bold text-[#c27700]">{stat.number}</p>
+              <p className="text-gray-700">{stat.label}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section className="py-20 bg-gradient-to-br from-[#fff9f3] to-[#fff4e6] text-center text-[#c27700]">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="text-4xl font-bold mb-4"
+        >
+          Together, We’re Building Tomorrow’s Leaders — Today.
+        </motion.h2>
+
         <motion.div
           variants={fadeUp}
           initial="hidden"
-          whileInView="visible"
+          whileInView="show"
+          custom={1}
           viewport={{ once: true }}
+          className="flex flex-wrap justify-center gap-4 mt-8"
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Join Us In Building a Brighter Future
-          </h2>
-          <p className="mb-6 max-w-2xl mx-auto">
-            Partner with us, support a learner, or help amplify our work through collaboration.
-          </p>
+          <Link
+            to="/programmes"
+            className="bg-[#c27700] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#a25e00] transition"
+          >
+            🎓 Enroll in a Programme
+          </Link>
           <Link
             to="/donate"
-            className="inline-block bg-white text-[#c27700] font-bold px-8 py-4 rounded-full hover:bg-yellow-100 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+            className="border border-[#c27700] text-[#c27700] px-6 py-3 rounded-lg font-semibold hover:bg-[#c27700] hover:text-white transition"
           >
-            Donate Now!!!
+            💡 Partner With Us
+          </Link>
+          <Link
+            to="/donate"
+            className="bg-[#c27700] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#a25e00] transition"
+          >
+            ❤️ Make a Donation
           </Link>
         </motion.div>
       </section>

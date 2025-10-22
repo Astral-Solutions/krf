@@ -68,7 +68,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold text-[#c27700] mb-6">Connect With Us</h2>
               <div className="grid grid-cols-2 gap-4">
                 <a
-                  href="https://www.facebook.com/krfoundation"
+                  href="https://web.facebook.com/profile.php?id=100064528696915"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -78,7 +78,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://www.instagram.com/krfoundation"
+                  href="https://www.instagram.com/koketsorakhudu_foundation?igsh=MWI0NDVlbWV0eG9mbw=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 p-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors"
@@ -88,23 +88,13 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/krfoundation"
+                  href="https://www.linkedin.com/company/koketso-rakhudu-foundation/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 p-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors"
                 >
                   <Linkedin size={20} />
                   <span>LinkedIn</span>
-                </a>
-
-                <a
-                  href="https://wa.me/27123456789"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-3 p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                >
-                  <MessageCircle size={20} />
-                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>

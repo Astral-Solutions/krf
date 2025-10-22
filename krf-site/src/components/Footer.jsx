@@ -10,9 +10,9 @@ const Footer = () => (
         <ul className="flex flex-wrap justify-center items-center gap-4 text-xs font-medium text-white">
           <li><Link to="/" className="hover:text-yellow-200 transition-colors">Home</Link></li>
           <li><Link to="/about" className="hover:text-yellow-200 transition-colors">About</Link></li>
-          <li><Link to="/services" className="hover:text-yellow-200 transition-colors">Services</Link></li>
-          <li><Link to="/programmes" className="hover:text-yellow-200 transition-colors">Programmes</Link></li>
           <li><Link to="/impact" className="hover:text-yellow-200 transition-colors">Impact</Link></li>
+          <li><Link to="/milestones" className="hover:text-yellow-200 transition-colors">Milestones</Link></li>
+          <li><Link to="/servicesprograms" className="hover:text-yellow-200 transition-colors">Services & Programs</Link></li>
           <li><Link to="/contact" className="hover:text-yellow-200 transition-colors">Contact</Link></li>
           <li>
             <Link to="/donate" className="hover:text-yellow-200 transition-colors font-semibold">

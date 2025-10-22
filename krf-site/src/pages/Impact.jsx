@@ -1,3 +1,4 @@
+// src/pages/Impact.jsx
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -10,78 +11,56 @@ const fadeUp = {
   }),
 };
 
+const placeholderImage = "/images/KRFDesign.jpg";
+
 // Grouped by year, descending order (2025 first, 2016 last)
 const impactStatsByYear = {
   2025: [],
   2024: [
-    { title: "LPG CSI Hakem Energies", count: 1000 },
-    { title: "Solar Training", count: 15 },
-    { title: "W&R Seta Program", count: 300 },
-    { title: "Short Learning Program", count: 150 },
+    { title: "LPG CSI Hakem Energies", count: 1000, image: "/images/LPGCommunity.jpeg" },
+    { title: "Solar Training", count: 15, image: "/images/Students4.jpeg" },
+    { title: "W&R Seta Program", count: 300, image: "/images/Students.jpeg" },
+    { title: "Short Learning Program", count: 150, image: "/images/Students1.jpeg" },
   ],
   2023: [
-    { title: "Microsoft Dev Program", count: 25 },
-    { title: "Lora Biz Training", count: 45 },
-    { title: "Office/Project/Business NQF", count: 150 },
+    { title: "Microsoft Dev Program", count: 25, image: "/images/IT.jpeg" },
+    { title: "Lora Biz Training", count: 45, image: placeholderImage },
+    { title: "Office/Project/Business NQF", count: 150, image: "/images/Students2.jpeg" },
   ],
   2022: [
-    { title: "Social Employment Fund", count: 62 },
-    { title: "Coffee w/ Dr Rakhudu ECD", count: 30 },
-    { title: "Metropolitan Literacy", count: 85 },
-    { title: "BMW YES Programme", count: 15 },
+    { title: "Social Employment Fund", count: 62, image:  "/images/Students3.jpeg" },
+    { title: "Coffee w/ Dr Rakhudu ECD", count: 30, image: placeholderImage },
+    { title: "Metropolitan Literacy", count: 85, image: placeholderImage },
+    { title: "BMW YES Programme", count: 15, image: placeholderImage },
   ],
   2021: [
-    { title: "ABSA & SMME Training", count: 300 },
-    { title: "Anglo ECD Programme", count: 450 },
-    { title: "Entrepreneurial Skills Program", count: 40 },
+    { title: "ABSA & SMME Training", count: 300, image: placeholderImage },
+    { title: "Anglo ECD Programme", count: 450, image: placeholderImage },
+    { title: "Entrepreneurial Skills Program", count: 40, image: placeholderImage },
   ],
   2020: [
-    { title: "Women's Empowerment", count: 20 },
+    { title: "Women's Empowerment", count: 20, image: placeholderImage },
   ],
   2019: [
-    { title: "Office & Project Mgt Courses", count: 250 },
+    { title: "Office & Project Mgt Courses", count: 250, image: placeholderImage },
   ],
   2018: [
-    { title: "Exchange Student Program", count: 20 },
-    { title: "Office Practice NQF 4", count: 100 },
-    { title: "Project Management NQF 4", count: 100 },
-    { title: "Business Practice NQF 4", count: 100 },
-    { title: "Youth Leadership Training", count: 50 },
+    { title: "Exchange Student Program", count: 20, image: placeholderImage },
+    { title: "Office Practice NQF 4", count: 100, image: placeholderImage },
+    { title: "Project Management NQF 4", count: 100, image: placeholderImage },
+    { title: "Business Practice NQF 4", count: 100, image: placeholderImage },
+    { title: "Youth Leadership Training", count: 50, image: placeholderImage },
   ],
   2017: [
-    { title: "Grade 12 Rewrite Program", count: 200 },
-    { title: "Small Business Skills Dev", count: 100 },
+    { title: "Grade 12 Rewrite Program", count: 200, image: placeholderImage },
+    { title: "Small Business Skills Dev", count: 100, image: placeholderImage },
   ],
   2016: [
-    { title: "Social, Women and Disability", count: 300 },
+    { title: "Social, Women and Disability", count: 300, image: placeholderImage },
   ],
 };
 
-// Testimonials data
-const testimonials = [
-  {
-    name: "Thabo Mthembu",
-    program: "Office Practice NQF 4",
-    year: 2018,
-    testimonial: "The KRF program transformed my career prospects. I gained valuable skills and confidence that helped me secure employment in the corporate sector."
-  },
-  {
-    name: "Sarah Ndlovu",
-    program: "Women's Empowerment",
-    year: 2020,
-    testimonial: "This program empowered me to start my own business. The financial literacy training was exactly what I needed to succeed."
-  },
-  {
-    name: "Michael Sithole",
-    program: "Microsoft Dev Program",
-    year: 2023,
-    testimonial: "The tech training opened doors I never imagined. I'm now working as a junior developer and continuing to grow my skills."
-  }
-];
-
-const placeholderImage = "https://via.placeholder.com/300x160?text=KRF+Impact";
-
-// Animated Counter Component
+// Animated counter
 const AnimatedCounter = ({ targetCount, duration = 2000 }) => {
   const [count, setCount] = useState(0);
 
@@ -91,9 +70,7 @@ const AnimatedCounter = ({ targetCount, duration = 2000 }) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       setCount(Math.floor(progress * targetCount));
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
+      if (progress < 1) requestAnimationFrame(animate);
     };
     requestAnimationFrame(animate);
   }, [targetCount, duration]);
@@ -103,9 +80,6 @@ const AnimatedCounter = ({ targetCount, duration = 2000 }) => {
 
 const Impact = () => {
   const [modalData, setModalData] = useState(null);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-
-  // Total beneficiaries from the data
   const totalPeopleImpacted = 3267;
 
   return (
@@ -115,7 +89,8 @@ const Impact = () => {
       <div className="absolute bottom-20 left-20 w-24 h-2 bg-[#c27700] opacity-15 rounded-full"></div>
 
       <div className="max-w-6xl mx-auto">
-        <motion.h1 
+        {/* Header */}
+        <motion.h1
           className="text-4xl font-bold text-[#c27700] mb-6 text-center"
           variants={fadeUp}
           initial="hidden"
@@ -125,31 +100,28 @@ const Impact = () => {
           Measurable Impact
         </motion.h1>
 
-        {/* Explanation of Measurable Impact */}
-        <motion.div 
+        {/* Definition */}
+        <motion.div
           className="mb-12 bg-white p-6 rounded-lg shadow-md border-l-4 border-[#c27700]"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          custom={1}
         >
           <p className="text-gray-700 leading-relaxed">
-            Measurable impact refers to the quantifiable changes and improvements that result from our programmes and interventions. 
-            We track the number of beneficiaries, skills acquired, employment rates, and community development outcomes to ensure 
-            our work creates meaningful, lasting change. Each program is evaluated based on specific metrics that demonstrate 
-            real progress in education, employment, and community empowerment.
+            Measurable impact refers to the quantifiable improvements from our programmes
+            and interventions. We monitor beneficiary reach, skills gained, employment outcomes,
+            and community growth to ensure meaningful, lasting change across South Africa.
           </p>
         </motion.div>
 
-        {/* Key Statistics Grid */}
-        <motion.div 
+        {/* Key Stats */}
+        <motion.div
           className="mb-12 grid sm:grid-cols-2 md:grid-cols-4 gap-6"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          custom={2}
         >
           <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#c27700]">
             <div className="text-4xl font-extrabold text-[#c27700] mb-2">
@@ -158,19 +130,16 @@ const Impact = () => {
             <p className="text-sm font-semibold text-gray-700 mb-1">Total Beneficiaries</p>
             <p className="text-xs text-gray-600">Lives transformed</p>
           </div>
-          
           <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#c27700]">
             <div className="text-4xl font-extrabold text-[#c27700] mb-2">R5.7M</div>
             <p className="text-sm font-semibold text-gray-700 mb-1">Investment Value</p>
             <p className="text-xs text-gray-600">Community Impact</p>
           </div>
-          
           <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#c27700]">
             <div className="text-4xl font-extrabold text-[#c27700] mb-2">25+</div>
             <p className="text-sm font-semibold text-gray-700 mb-1">Training Programmes</p>
             <p className="text-xs text-gray-600">Diverse Offering</p>
           </div>
-          
           <div className="bg-white p-6 rounded-lg shadow-md text-center border-t-4 border-[#c27700]">
             <div className="text-4xl font-extrabold text-[#c27700] mb-2">3</div>
             <p className="text-sm font-semibold text-gray-700 mb-1">Training Centers</p>
@@ -179,106 +148,54 @@ const Impact = () => {
         </motion.div>
 
         {/* Learner Demographics */}
-        <motion.div 
+        <motion.div
           className="mb-12"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          custom={3}
         >
           <h2 className="text-3xl font-bold text-[#c27700] mb-8 text-center">Learner Demographics</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-[#c27700] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <span className="text-2xl">👔</span>
+            {[
+              { icon: "👔", label: "Adults (18–55)", desc: "Career change and upskilling" },
+              { icon: "🏢", label: "Corporate", desc: "SMEs & public sector teams" },
+              { icon: "🎓", label: "School Leavers & Youth", desc: "Future workforce preparation" },
+              { icon: "🤝", label: "Underemployed", desc: "Community inclusion and support" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow text-center"
+              >
+                <div className="w-12 h-12 bg-[#c27700] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-2xl">{item.icon}</span>
+                </div>
+                <h3 className="font-semibold text-gray-800 mb-2">{item.label}</h3>
+                <p className="text-sm text-gray-600">{item.desc}</p>
               </div>
-              <h3 className="font-semibold text-gray-800 text-center mb-2">Adults (18-55)</h3>
-              <p className="text-sm text-gray-600 text-center">Career Change and Upskilling</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-[#c27700] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <span className="text-2xl">🏢</span>
-              </div>
-              <h3 className="font-semibold text-gray-800 text-center mb-2">Corporate</h3>
-              <p className="text-sm text-gray-600 text-center">SMEs & Public Sector</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-[#c27700] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <span className="text-2xl">🎓</span>
-              </div>
-              <h3 className="font-semibold text-gray-800 text-center mb-2">School Leavers & Youth</h3>
-              <p className="text-sm text-gray-600 text-center">Future workforce preparation</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-[#c27700] bg-opacity-10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <span className="text-2xl">🤝</span>
-              </div>
-              <h3 className="font-semibold text-gray-800 text-center mb-2">Underemployed</h3>
-              <p className="text-sm text-gray-600 text-center">Community Members</p>
-            </div>
+            ))}
           </div>
         </motion.div>
 
-        {/* Key Achievements Section */}
-        <motion.div 
+        {/* Key Achievements */}
+        <motion.div
           className="mb-12"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          custom={4}
         >
-          <h2 className="text-3xl font-bold text-[#c27700] mb-8 text-center">Key Achievements Since 2016</h2>
+          <h2 className="text-3xl font-bold text-[#c27700] mb-8 text-center">
+            Key Achievements Since 2016
+          </h2>
         </motion.div>
 
-        {/* Testimonials Section */}
-        <motion.div 
-          className="mb-12"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={5}
-        >
-          <h2 className="text-3xl font-bold text-[#c27700] mb-8 text-center">Testimonials</h2>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="flex justify-center mb-4">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-3 h-3 rounded-full mx-1 transition-colors ${
-                    index === activeTestimonial ? 'bg-[#c27700]' : 'bg-gray-300'
-                  }`}
-                  onClick={() => setActiveTestimonial(index)}
-                />
-              ))}
-            </div>
-            <div className="text-center">
-              <p className="text-gray-700 italic mb-4 text-lg">
-                "{testimonials[activeTestimonial].testimonial}"
-              </p>
-              <div>
-                <p className="font-semibold text-[#c27700]">
-                  {testimonials[activeTestimonial].name}
-                </p>
-                <p className="text-sm text-gray-600">
-                  {testimonials[activeTestimonial].program} • {testimonials[activeTestimonial].year}
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Impact by Year - Grouped and Sorted */}
+        {/* Achievements by Year */}
         {Object.keys(impactStatsByYear)
-          .sort((a, b) => b - a) // Descending order
+          .sort((a, b) => b - a)
           .map((year) => {
             const programs = impactStatsByYear[year];
-            if (programs.length === 0) return null;
+            if (!programs.length) return null;
 
             return (
               <motion.div
@@ -290,13 +207,13 @@ const Impact = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl font-bold text-[#c27700] mb-6 text-center">
-                  {year} Programs
+                  {year} Programmes
                 </h2>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                  {programs.map((impact, idx) => (
+                  {programs.map((impact, i) => (
                     <motion.div
-                      key={`${year}-${idx}`}
-                      custom={idx}
+                      key={`${year}-${i}`}
+                      custom={i}
                       variants={fadeUp}
                       initial="hidden"
                       whileInView="visible"
@@ -305,9 +222,9 @@ const Impact = () => {
                       onClick={() => setModalData({ ...impact, year })}
                     >
                       <img
-                        src={placeholderImage}
-                        alt="Impact Visual"
-                        className="w-full h-40 object-cover rounded-t-lg"
+                        src={impact.image || placeholderImage}
+                        alt={impact.title}
+                        className="w-full h-40 object-contain rounded-t-lg"
                         loading="lazy"
                       />
                       <div className="p-4">
@@ -343,22 +260,10 @@ const Impact = () => {
                 &times;
               </button>
               <img
-                src={placeholderImage}
-                alt="Expanded Impact"
+                src={modalData.image || placeholderImage}
+                alt={modalData.title}
                 className="w-full h-40 object-cover rounded mb-4"
               />
-              
-              {/* Testimonials in Modal */}
-              <div className="mb-4">
-                <h3 className="text-lg font-semibold text-[#c27700] mb-2">Testimonials</h3>
-                <div className="bg-gray-50 p-3 rounded text-sm">
-                  <p className="italic text-gray-700 mb-2">
-                    "This program provided me with essential skills and opened new opportunities for personal and professional growth."
-                  </p>
-                  <p className="text-gray-600">- Program Participant</p>
-                </div>
-              </div>
-
               <h2 className="text-2xl font-bold text-[#c27700] mb-2">
                 {modalData.title}
               </h2>
@@ -369,9 +274,9 @@ const Impact = () => {
                 <strong>Beneficiaries:</strong> {modalData.count.toLocaleString()}
               </p>
               <p className="text-sm text-gray-600">
-                This programme empowered local individuals with skills, mentorship,
-                and practical training to advance employment and entrepreneurship opportunities.
-                For more detailed reporting, kindly contact the KRF team.
+                This programme empowered individuals with practical training,
+                mentorship, and skills for long-term economic inclusion and
+                community development.
               </p>
             </div>
           </div>

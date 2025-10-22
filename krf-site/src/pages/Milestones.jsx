@@ -17,12 +17,11 @@ const milestones = [
     title: "Expansion and Innovation",
     summary: "Launched digital learning platforms and expanded reach",
     details: [
-      "Implemented online learning management system",
+      "Implemented learning management systems",
       "Increased programme capacity by 40%",
-      "Launched mobile app for student engagement",
       "Established partnerships with 5 new corporates"
     ],
-    image: "https://via.placeholder.com/600x300?text=2025+Innovation",
+    image: "/images/KRFDesign.jpg",
     stats: { beneficiaries: 2000, programmes: 8, partnerships: 15 }
   },
   {
@@ -36,7 +35,7 @@ const milestones = [
       "Short Learning Programs benefited 150 individuals",
       "Established regional training centers"
     ],
-    image: "https://via.placeholder.com/600x300?text=2024+Record+Impact",
+    image: "/images/LPGComm.jpg",
     stats: { beneficiaries: 1465, programmes: 4, partnerships: 12 }
   },
   {
@@ -50,7 +49,7 @@ const milestones = [
       "Integrated e-learning platforms",
       "Enhanced digital literacy across all programmes"
     ],
-    image: "https://via.placeholder.com/600x300?text=2023+Technology",
+    image: "/images/IT.jpeg",
     stats: { beneficiaries: 220, programmes: 3, partnerships: 8 }
   },
   {
@@ -64,7 +63,7 @@ const milestones = [
       "BMW YES Programme trained 15 young professionals",
       "Established mentorship networks"
     ],
-    image: "https://via.placeholder.com/600x300?text=2022+Partnerships",
+    image: "/images/BMW.jpg",
     stats: { beneficiaries: 192, programmes: 4, partnerships: 6 }
   },
   {
@@ -78,7 +77,7 @@ const milestones = [
       "Implemented health and safety protocols",
       "Developed hybrid learning models"
     ],
-    image: "https://via.placeholder.com/600x300?text=2021+Resilience",
+    image: "/images/Students7.jpg",
     stats: { beneficiaries: 790, programmes: 3, partnerships: 4 }
   },
   {
@@ -92,7 +91,7 @@ const milestones = [
       "Created women-focused support networks",
       "Achieved 100% completion rate"
     ],
-    image: "https://via.placeholder.com/600x300?text=2020+Women+Empowerment",
+    image: "/images/ImpactLadies1.jpg",
     stats: { beneficiaries: 20, programmes: 1, partnerships: 2 }
   },
   {
@@ -106,7 +105,7 @@ const milestones = [
       "Established employer partnerships for job placement",
       "Achieved 85% employment rate for graduates"
     ],
-    image: "https://via.placeholder.com/600x300?text=2019+Consolidation",
+    image: "/images/Students6.jpg",
     stats: { beneficiaries: 250, programmes: 2, partnerships: 3 }
   },
   {
@@ -121,7 +120,7 @@ const milestones = [
       "Youth Leadership Training developed 50 young leaders",
       "Established international partnerships"
     ],
-    image: "https://via.placeholder.com/600x300?text=2018+Growth",
+    image: "/images/Students5.jpg",
     stats: { beneficiaries: 370, programmes: 5, partnerships: 5 }
   },
   {
@@ -135,7 +134,7 @@ const milestones = [
       "Established ongoing support networks",
       "Created sustainable business models for graduates"
     ],
-    image: "https://via.placeholder.com/600x300?text=2017+Education",
+    image: "/images/Grade12.jpeg",
     stats: { beneficiaries: 300, programmes: 2, partnerships: 2 }
   },
   {
@@ -149,7 +148,7 @@ const milestones = [
       "Created foundational partnerships",
       "Set the groundwork for sustainable community development"
     ],
-    image: "https://via.placeholder.com/600x300?text=2016+Foundation",
+    image: "/images/ImpactLadies.jpg",
     stats: { beneficiaries: 300, programmes: 1, partnerships: 1 }
   }
 ];
@@ -246,7 +245,7 @@ const Milestones = () => {
                         <img
                           src={milestone.image}
                           alt={`${milestone.year} milestone`}
-                          className="w-full h-64 object-cover rounded-lg shadow-md"
+                          className="w-full h-64 object-contain rounded-lg shadow-md"
                         />
                         
                         {/* Statistics */}
