@@ -29,7 +29,7 @@ const impactStatsByYear = {
   ],
   2022: [
     { title: "Social Employment Fund", count: 62, image:  "/images/Students3.jpeg" },
-    { title: "Coffee w/ Dr Rakhudu ECD", count: 30, image: placeholderImage },
+    { title: "Coffee w/ Dr Rakhudu ECD", count: 30, image: "/images/CoffeeDesign1.jpg" },
     { title: "Metropolitan Literacy", count: 85, image: placeholderImage },
     { title: "BMW YES Programme", count: 15, image: placeholderImage },
   ],
