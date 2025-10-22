@@ -276,7 +276,7 @@ const Home = () => {
           className="flex flex-wrap justify-center gap-4 mt-8"
         >
           <Link
-            to="/programmes"
+            to="/servicesprograms"
             className="bg-[#c27700] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#a25e00] transition"
           >
             🎓 Enroll in a Programme
